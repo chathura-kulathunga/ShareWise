@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "."
+    ],
+    "java.project.referencedLibraries": [
+        "libs\\json-20230618.jar",
+        "libs\\nanohttpd-2.3.1.jar"
+    ]
+}
