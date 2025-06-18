@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
   <div class="container py-5">
     <h1 class="text-center mb-4 text-primary fw-bold">ShareWise</h1>
@@ -48,8 +50,7 @@
               name="shareType"
               id="byContribution"
               value="contribution"
-              checked
-            />
+              checked />
             <label class="form-check-label" for="byContribution">By Contribution</label>
           </div>
           <div class="form-check form-check-inline">
@@ -58,14 +59,18 @@
               type="radio"
               name="shareType"
               id="byPercentage"
-              value="percentage"
-            />
+              value="percentage" />
             <label class="form-check-label" for="byPercentage">By Percentage</label>
           </div>
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary w-100">Calculate Profit</button>
+      <!-- <button type="submit" class="btn btn-primary w-100">Calculate Profit</button> -->
+      <div class="d-flex gap-2">
+        <button type="button" id="clearBtn" class="btn btn-secondary w-100">Clear All</button>
+        <button type="submit" class="btn btn-primary w-100">Calculate Profit</button>
+      </div>
+
     </form>
 
     <div id="resultArea" class="mt-4"></div>
@@ -73,4 +78,5 @@
 
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>

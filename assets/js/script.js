@@ -19,7 +19,7 @@ function createContributionInputs(count) {
     input.name = 'contribution' + i;  // This is VERY important for PHP to receive
     input.min = 0;
     input.required = true;
-    input.value = 0;
+    //input.value = 0;
 
     div.appendChild(label);
     div.appendChild(input);
@@ -79,4 +79,11 @@ document.getElementById('profitForm').addEventListener('submit', async (e) => {
     document.getElementById('resultArea').innerHTML = `<div class="alert alert-danger">Error calculating profit.</div>`;
     console.error('Error:', error);
   }
+});
+
+// Handle Clear All button
+document.getElementById('clearBtn').addEventListener('click', () => {
+  document.getElementById('profitForm').reset();
+  createContributionInputs(parseInt(document.getElementById('peopleCount').value));
+  document.getElementById('resultArea').innerHTML = '';
 });
