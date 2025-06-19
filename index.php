@@ -6,11 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ShareWise – Smart Profit Sharing</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
   <div class="container py-5">
+    <div class="d-flex justify-content-end mb-3">
+  <button id="modeToggle" class="btn btn-outline-dark">🌙 Dark Mode</button>
+</div>
+
     <h1 class="text-center mb-4 text-primary fw-bold">ShareWise</h1>
     <p class="text-center mb-5 text-muted">Smart profit sharing calculator for partners</p>
 

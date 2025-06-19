@@ -1,27 +1,116 @@
+:root {
+  --bg-light: #f9fafb;
+  --bg-dark: #212529;
+  --text-light: #212529;
+  --text-dark: #f8f9fa;
+  --box-light: #e9ecef;
+  --box-dark: #343a40;
+}
+
+/* General Styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f9fafb;
-  color: #212529;
+  background: var(--bg-light);
+  color: var(--text-light);
   padding: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 h1 {
   margin-bottom: 20px;
+  transition: color 0.3s;
 }
 
+p.text-muted {
+  transition: color 0.3s;
+}
+
+/* Result Area */
 #resultArea {
   margin-top: 30px;
   padding: 15px;
-  background: #e9ecef;
+  background: var(--box-light);
   border-radius: 10px;
   min-height: 100px;
   font-family: monospace;
+  transition: all 0.3s ease-in-out;
+  animation: fadeInUp 0.4s ease;
 }
 
+/* Form + Button Transitions */
+.form-control,
+.form-check-label,
+.form-check-input,
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Button Effect */
+.btn {
+  transform: scale(1);
+}
+
+.btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #495057;
+  color: #f8f9fa;
+  border: 1px solid #6c757d;
+}
+
+body.dark-mode .form-check-label {
+  color: #f8f9fa;
+}
+
+body.dark-mode #resultArea {
+  background: var(--box-dark);
+  color: #f8f9fa;
+}
+
+body.dark-mode .btn-outline-dark {
+  border-color: #f8f9fa;
+  color: #f8f9fa;
+}
+
+body.dark-mode .btn-outline-dark:hover {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* Optional: Dark button switch look when toggled */
+.btn-outline-light {
+  border-color: #f8f9fa;
+  color: #f8f9fa;
+}
+
+/* Text Danger */
 .text-danger {
   color: #dc3545 !important;
 }
 
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mobile Responsive Adjustments */
 @media (max-width: 576px) {
   body {
     padding: 10px;
@@ -71,4 +160,3 @@ h1 {
     min-height: 80px;
   }
 }
-
