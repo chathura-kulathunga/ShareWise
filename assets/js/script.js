@@ -87,3 +87,15 @@ document.getElementById('clearBtn').addEventListener('click', () => {
   createContributionInputs(parseInt(document.getElementById('peopleCount').value));
   document.getElementById('resultArea').innerHTML = '';
 });
+
+// Dark/Light mode toggle
+document.getElementById('modeToggle').addEventListener('click', () => {
+  const body = document.body;
+  body.classList.toggle('dark-mode');
+
+  const isDark = body.classList.contains('dark-mode');
+  const toggleBtn = document.getElementById('modeToggle');
+  toggleBtn.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+  toggleBtn.classList.toggle('btn-outline-light');
+  toggleBtn.classList.toggle('btn-outline-dark');
+});
