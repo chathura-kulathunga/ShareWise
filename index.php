@@ -11,13 +11,15 @@
 </head>
 
 <body>
-  <div class="container py-5">
-    <div class="d-flex justify-content-end mb-3">
-  <button id="modeToggle" class="btn btn-outline-dark">🌙 Dark Mode</button>
-</div>
+  <div class="container py-5 animate__animated animate__fadeInUp animate__faster">
 
-    <h1 class="text-center mb-4 text-primary fw-bold">ShareWise</h1>
-    <p class="text-center mb-5 text-muted">Smart profit sharing calculator for partners</p>
+    <div class="d-flex justify-content-end mb-3">
+      <button id="modeToggle" class="btn btn-outline-dark">🌙 Dark Mode</button>
+    </div>
+
+    <h1 class="text-center mb-4 text-primary fw-bold animate__animated animate__fadeInDown">ShareWise</h1>
+    <p class="text-center mb-5 text-muted animate__animated animate__fadeIn animate__delay-1s">Smart profit sharing calculator for partners</p>
+
 
     <form id="profitForm">
       <div class="mb-3">

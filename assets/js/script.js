@@ -5,7 +5,7 @@ function createContributionInputs(count) {
 
   for (let i = 1; i <= count; i++) {
     const div = document.createElement('div');
-    div.className = 'mb-3';
+    div.className = 'mb-3 animate__animated animate__fadeInUp animate__faster';
 
     const label = document.createElement('label');
     label.className = 'form-label';
@@ -64,16 +64,27 @@ document.getElementById('profitForm').addEventListener('submit', async (e) => {
       resultArea.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
     } else {
       // Build results HTML here — example:
-      let html = '<h4>Profit Sharing Result</h4>';
-      html += `<p><strong>Total Profit:</strong> ${data.totalProfit.toFixed(2)} LKR</p>`;
-      html += '<ul class="list-group">';
+      let html = '<h4 class="animate__animated animate__fadeInDown">Profit Sharing Result</h4>';
+      html += `<p class="animate__animated animate__fadeIn animate__delay-1s"><strong>Total Profit:</strong> ${data.totalProfit.toFixed(2)} LKR</p>`;
+
+      if (data.commission && data.commission > 0) {
+        html += `<p class="animate__animated animate__fadeIn animate__delay-2s text-info">
+    <strong>Commission Deducted:</strong> ${data.commission}% 
+    <span class="text-muted">(${data.commissionAmount.toFixed(2)} LKR)</span>
+  </p>`;
+      }
+
+      html += '<ul class="list-group mt-3">';
 
       data.shares.forEach((share, index) => {
-        html += `<li class="list-group-item">Person ${index + 1}: ${share.toFixed(2)} LKR</li>`;
+        html += `<li class="list-group-item animate__animated animate__fadeInUp">
+    <strong>Contributor Person ${index + 1}:</strong> ${share.toFixed(2)} LKR
+  </li>`;
       });
-      html += '</ul>';
 
-      resultArea.innerHTML = html;
+      html += '</ul>';
+      document.getElementById('resultArea').innerHTML = html;
+
     }
   } catch (error) {
     document.getElementById('resultArea').innerHTML = `<div class="alert alert-danger">Error calculating profit.</div>`;
