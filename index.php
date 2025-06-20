@@ -11,15 +11,16 @@
 </head>
 
 <body>
-  <div class="container py-5 animate__animated animate__fadeInUp animate__faster">
 
-    <div class="d-flex justify-content-end mb-3">
-      <button id="modeToggle" class="btn btn-outline-dark">🌙 Dark Mode</button>
+  <div class="container py-2 px-3 animate__animated animate__fadeInUp animate__faster">
+
+    <div class="position-relative d-flex justify-content-between align-items-center mb-4 flex-wrap">
+      <h1 class="m-0 text-primary fw-bold position-absolute top-50 start-50 translate-middle-x animate__animated animate__fadeInDown">
+        ShareWise
+      </h1>
+      <p class="text-center mb-3 text-muted text-center mb-5 text-muted animate__animated animate__fadeIn animate__delay-1s">Smart profit sharing calculator for partners</p>
+      <button id="modeToggle">🌙 Dark Mode</button>
     </div>
-
-    <h1 class="text-center mb-4 text-primary fw-bold animate__animated animate__fadeInDown">ShareWise</h1>
-    <p class="text-center mb-5 text-muted animate__animated animate__fadeIn animate__delay-1s">Smart profit sharing calculator for partners</p>
-
 
     <form id="profitForm">
       <div class="mb-3">

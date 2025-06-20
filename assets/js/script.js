@@ -71,7 +71,7 @@ document.getElementById('profitForm').addEventListener('submit', async (e) => {
         html += `<p class="animate__animated animate__fadeIn animate__delay-2s text-info">
     <strong>Commission Deducted:</strong> ${data.commission}% 
     <span class="text-muted">(${data.commissionAmount.toFixed(2)} LKR)</span>
-  </p>`;
+    </p>`;
       }
 
       html += '<ul class="list-group mt-3">';
