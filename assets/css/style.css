@@ -36,6 +36,10 @@ p.text-muted {
   transition: all 0.3s ease-in-out;
   animation: fadeInUp 0.4s ease;
 }
+.text-info {
+  color: #053943 !important;
+  font-weight: 500;
+}
 
 /* Form + Button Transitions */
 .form-control,
@@ -51,8 +55,8 @@ p.text-muted {
 }
 
 .btn:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Dark Mode Styles */
@@ -87,6 +91,18 @@ body.dark-mode .btn-outline-dark:hover {
   color: #212529;
 }
 
+body.dark-mode .text-muted {
+  color: #bbbbbb !important; /* or use #cccccc for a slightly lighter shade */
+}
+
+body.dark-mode .text-info {
+  color: #4dc1d6 !important; /* light aqua/blue that works well on dark bg */
+}
+
+.text-info {
+  transition: color 0.3s ease-in-out;
+}
+
 /* Optional: Dark button switch look when toggled */
 .btn-outline-light {
   border-color: #f8f9fa;
@@ -115,28 +131,23 @@ body.dark-mode .btn-outline-dark:hover {
   body {
     padding: 10px;
   }
-
   h1 {
     font-size: 1.3rem;
     margin-bottom: 6px;
   }
-
   p.text-muted {
     font-size: 0.85rem;
     margin-bottom: 10px;
     line-height: 1.2;
   }
-
   .container.py-5 {
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
   }
-
   .form-label {
     font-size: 0.85rem;
     margin-bottom: 2px;
   }
-
   .form-control,
   .form-check-input,
   .form-check-label {
@@ -144,19 +155,53 @@ body.dark-mode .btn-outline-dark:hover {
     margin-bottom: 6px !important;
     padding: 6px 10px;
   }
-
   .mb-3 {
     margin-bottom: 10px !important;
   }
-
   .btn {
     padding: 8px;
     font-size: 0.95rem;
   }
-
   #resultArea {
     padding: 8px;
     font-size: 0.85rem;
     min-height: 80px;
+  }
+}
+
+/* Dark Mode Toggle Button */
+#modeToggle {
+  border: none;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-weight: 500;
+  box-shadow: 0 4px 20px rgba(75, 108, 183, 0.4);
+  transition: all 0.3s ease;
+}
+
+#modeToggle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(75, 108, 183, 0.6);
+  cursor: pointer;
+}
+
+body.dark-mode #modeToggle {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  color: #212529;
+  box-shadow: 0 4px 20px rgba(255, 210, 0, 0.5);
+}
+
+@media (max-width: 576px) {
+  .position-relative.d-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  h1.position-absolute {
+    position: static !important;
+    transform: none !important;
+    text-align: center;
+    width: 100%;
   }
 }

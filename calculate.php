@@ -34,8 +34,10 @@ for ($i = 1; $i <= $peopleCount; $i++) {
 
 // Calculate profit after commission
 $totalProfit = $salePrice - $purchasePrice;
+$commissionAmount = 0;
 if ($commission > 0) {
-    $totalProfit -= ($totalProfit * ($commission / 100));
+    $commissionAmount = $totalProfit * ($commission / 100);
+    $totalProfit -= $commissionAmount;
 }
 
 if ($totalProfit < 0) {
@@ -55,8 +57,7 @@ if ($shareType === 'contribution') {
         $shares[] = $totalProfit * ($c / $totalContribution);
     }
 } elseif ($shareType === 'percentage') {
-    // In your form, percentage inputs don’t exist yet,
-    // so just divide equally as fallback
+    // In this form, percentage inputs don’t exist yet, so just divide equally as fallback
     $equalShare = $totalProfit / $peopleCount;
     for ($i = 0; $i < $peopleCount; $i++) {
         $shares[] = $equalShare;
@@ -69,5 +70,8 @@ if ($shareType === 'contribution') {
 echo json_encode([
     'totalProfit' => $totalProfit,
     'shares' => $shares,
+    'commission' => $commission,
+    'commissionAmount' => $commissionAmount
 ]);
+
 exit;
