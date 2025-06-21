@@ -81,9 +81,12 @@
 
     </form>
 
-    <div id="resultArea" class="mt-4"></div>
+    <div id="resultArea" class="mt-4">      
+    </div>
+    <canvas id="profitChart" width="400" height="200" class="mt-4"></canvas>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 

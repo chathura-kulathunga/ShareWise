@@ -57,8 +57,7 @@ if ($shareType === 'contribution') {
         $shares[] = $totalProfit * ($c / $totalContribution);
     }
 } elseif ($shareType === 'percentage') {
-    // In your form, percentage inputs don’t exist yet,
-    // so just divide equally as fallback
+    // In this form, percentage inputs don’t exist yet, so just divide equally as fallback
     $equalShare = $totalProfit / $peopleCount;
     for ($i = 0; $i < $peopleCount; $i++) {
         $shares[] = $equalShare;
