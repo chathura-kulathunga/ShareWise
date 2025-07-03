@@ -81,9 +81,12 @@
 
     </form>
 
-    <div id="resultArea" class="mt-4">      
+    <div id="resultArea" class="mt-4">
     </div>
     <canvas id="profitChart" width="400" height="200" class="mt-4"></canvas>
+    <div class="text-center mt-2">
+      <button id="chartModeToggle" class="btn btn-outline-primary">Switch to Advanced Chart</button>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
