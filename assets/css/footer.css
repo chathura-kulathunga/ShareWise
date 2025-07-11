@@ -1,0 +1,124 @@
+/* Body background */
+body {
+  background-color: #0a0a0a;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer style with glass effect and cyan accents */
+.contact-footer {
+  background: rgba(10, 20, 30, 0.85);
+  backdrop-filter: blur(8px);
+  border-top: 3px solid #00ffff;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+  color: #e0fafa;
+  width: 100%;
+}
+
+/* Partners section inside footer */
+.partners-section {
+  border-bottom: 2px solid #00ffff;
+  padding-top: 2rem;
+}
+
+/* Partners title: orbitron + glow */
+.partners-title {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+  font-size: 1.4rem;
+}
+
+/* Partner logos: clean, hover effect */
+.partner-logo {
+  max-height: 40px;
+  filter: brightness(1) drop-shadow(0 0 2px #00ffff);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.partner-logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.4) drop-shadow(0 0 6px #00ffff);
+}
+
+/* Brand */
+.contact-footer .brand {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 25px #00ffff;
+  transition: text-shadow 1s ease-in-out;
+}
+
+/* Tagline */
+.contact-footer .tagline {
+  font-size: 0.95rem;
+  color: #a0f0f0;
+}
+
+/* Headings */
+.contact-footer h5 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  color: #00ffff;
+  margin-bottom: 1rem;
+}
+
+/* Contact list */
+.contact-list li {
+  margin: 0.5rem 0;
+  color: #c2fafa;
+  font-size: 1rem;
+}
+
+/* Social icons */
+.social-icons a {
+  color: #00ffff;
+  font-size: 1.6rem;
+  margin: 0 0.4rem;
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.3) rotate(5deg);
+  text-shadow: 0 0 15px #00ffff;
+}
+
+/* Copyright */
+.copyright {
+  color: #66ffff;
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+/* Knight Rider effect */
+.contact-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  animation: knightRider 3s infinite alternate ease-in-out;
+}
+
+@keyframes knightRider {
+  0% { left: 0; }
+  100% { left: 80%; }
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .contact-footer .brand {
+    font-size: 1.8rem;
+  }
+  .partner-logo {
+    max-height: 30px;
+  }
+}
